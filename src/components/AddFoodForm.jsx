@@ -4,22 +4,22 @@ import { Divider, Input } from 'antd';
 // Iteration 4
 const AddFoodForm = ({ food, setFood, foods, setFoods, hide }) => {
 
-    const handleTextChange = (e) => {
+    const handleTextChange = (event) => {
 
-        setFood((recent) => ({ ...recent, [e.target.name]: e.target.value}))
+        setFood((recent) => ({ ...recent, [event.target.name]: event.target.value}))
 
         
       }
 
-    const handleNumberChange = (e) => {
+    const handleNumberChange = (event) => {
 
-        setFood((recent) => ({ ...recent, [e.target.name]: Number(e.target.value)}))
+        setFood((recent) => ({ ...recent, [event.target.name]: Number(event.target.value)}))
 
         
       }
     
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const handleSubmit = (event) => {
+        event.preventDefault()
 
         setFoods([food, ...foods])
         
